@@ -44,7 +44,7 @@
 }
 
 /* 숨김 콘텐츠 */
-.sr-only{
+.sr_only{
   position: absolute;
   width: 1px;
   height: 1px;
@@ -58,7 +58,7 @@
   border-width: 0;
 }
 
-.reset-list{
+.reset_list{
   margin: 0;
   margin-bottom: 0;
   list-style-type: none;
@@ -75,7 +75,7 @@
 
 
 /* 큰 이미지 상품 파트 */
-.big_fit_size{
+.big_logo_fit{
   max-width: var(--big_product_log_width);
   width: 100%;
   height: 100%;
@@ -89,7 +89,7 @@
   width: var(--big_box_width);
   height: var(--big_box_height);
   padding: 20px 28px; 
-  margin-bottom: 20px;
+  margin: 10px 0;
 
   display: flex;
   flex: left;
@@ -110,7 +110,6 @@
 .big_description{
   display: inline-block;
   margin-top: 13px;
-  max-width: var(--big_product_name_width);
   width: var(--big_product_name_width);
   min-height: var(--big_product_name_height);
   text-align: center;
@@ -122,14 +121,14 @@
   font-weight: var(--big_font_weight);
   line-height: var(--big_font_line_height); 
 }
-.big_product{
-  width: 222px;
-  height: 270px;
+.big_product_image{
+  width: var(--big_product_width);
+  height: var(--big_product_height);
 }
 
 /* 작은 이미지 상품 파트 */
 
-.small_fit_size{
+.small_logo_fit{
   max-width: var(--small_product_log_width);
   width: 100%;
   height: 100%;
@@ -137,11 +136,13 @@
 }
 
 .small_box{  
+  position: relative;
   box-sizing: border-box;
   border: 1px solid #C4C4C4;
   padding-left: 23px;
   padding-right: 24.99px;
   padding-block: 14px;
+  margin: 10px 0;
   width: var(--small_box_width);
   height: var(--small_box_height);
   
@@ -172,16 +173,12 @@
   margin-bottom: 7px;
 }
 
-.small_product{
+.small_product_image{
   width: var(--small_product_width);
   height: var(--small_product_height);
 }
 
 /* 구매하기 구현 */
-
-.product_list li{
-  position: relative;
-}
 
 .buy_button{
   border: 0 solid black;
@@ -199,7 +196,7 @@
 }
 
 .go_buy:hover > .buy_button{
-  background: blue;
+  background: #0074E9;
   width: var(--button_hover_width);
   height: var(--button_hover_height);
 }
@@ -212,5 +209,5 @@
 
 .big_box:hover,
 .small_box:hover{
-  border-color:blue;
+  border-color:#0074E9;
 }
