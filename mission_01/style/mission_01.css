@@ -1,0 +1,216 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+:root{
+  /* 큰 박스 정보 */
+  --big_box_width: 502px;
+  --big_box_height: 310px;
+  /* 큰 이미지 상품 정보 */
+  --big_product_log_width: 112px;
+  --big_product_log_height: 67px;
+  --big_product_name_width: 200px;
+  --big_product_name_height: 37px;
+  --big_product_width: 222px;
+  --big_product_height: 270px;
+  /* 큰 이미지 상품 폰트 */
+  --big_font_family: "Noto Sans", sans-serif;
+  --big_font_color: #4E4E4E;
+  --big_font_size: 24px;
+  --big_font_style: normal;
+  --big_font_weight: 700;
+  --big_font_line_height: 150%;
+  /* 작은 박스 정보 */
+  --small_box_width: 243px;
+  --small_box_height: 310px;
+  /* 작은 이미지 상품 정보 */
+  --small_product_log_width: 114px;
+  --small_product_log_height: 42px;
+  --small_product_name_width: 200px;
+  --small_product_name_height: 27px;
+  --small_product_width: 195px;
+  --small_product_height:196px;
+  /* 작은 이미지 상품 폰트 */
+  --small_font_family: "Noto Sans", sans-serif;
+  --small_font_color: #555;
+  --small_font_size: 18px;
+  --small_font_style: normal;
+  --small_font_weight: 700;
+  --small_font_line_height: 150%;
+  /* 버튼 정보 */
+  --button_size_width: 42px;
+  --button_size_height: 42px;
+  --button_color: #C4C4C4;
+  --button_hover_width: 112px;
+  --button_hover_height: 42px;
+}
+
+/* 숨김 콘텐츠 */
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0,0,0,0);
+  clip-path: polygon(0 0, 0 0, 0 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.reset-list{
+  margin: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+.product_list{
+  width: var(--big_box_width);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+/* 큰 이미지 상품 파트 */
+.big_fit_size{
+  max-width: var(--big_product_log_width);
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.big_box{
+  border: 1px solid #C4C4C4;
+  position: relative;
+  box-sizing: border-box;
+  width: var(--big_box_width);
+  height: var(--big_box_height);
+  padding: 20px 28px; 
+  margin-bottom: 20px;
+
+  display: flex;
+  flex: left;
+}
+
+.product_info{
+  margin-top: 55px;
+  margin-right: 24px;
+}
+
+.big_logo{
+  background-color: white;
+  width: var(--big_product_log_width);
+  height: var(--big_product_log_height);  
+
+  margin: 0 auto;
+}
+.big_description{
+  display: inline-block;
+  margin-top: 13px;
+  max-width: var(--big_product_name_width);
+  width: var(--big_product_name_width);
+  min-height: var(--big_product_name_height);
+  text-align: center;
+  
+  color: var(--big_font_color);
+  font-family: var(--big_font_family);
+  font-size: var(--big_font_size);
+  font-style: var(--big_font_style);
+  font-weight: var(--big_font_weight);
+  line-height: var(--big_font_line_height); 
+}
+.big_product{
+  width: 222px;
+  height: 270px;
+}
+
+/* 작은 이미지 상품 파트 */
+
+.small_fit_size{
+  max-width: var(--small_product_log_width);
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.small_box{  
+  box-sizing: border-box;
+  border: 1px solid #C4C4C4;
+  padding-left: 23px;
+  padding-right: 24.99px;
+  padding-block: 14px;
+  width: var(--small_box_width);
+  height: var(--small_box_height);
+  
+  display: flex;
+  flex-flow: column;
+}
+
+.small_logo{
+  background-color: white;
+  width: var(--small_product_log_width);
+  height: var(--small_product_log_height);
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.small_description{
+  max-width: var(--small_product_name_width);
+  min-height: var(--small_product_name_height);
+  text-align: center;
+  
+  color: var(--small_font_color);
+  font-family: var(--small_font_family);
+  font-size: var(--small_font_size);
+  font-style: var(--small_font_style);
+  font-weight: var(--small_font_weight);
+  line-height: var(--small_font_line_height); 
+
+  margin-bottom: 7px;
+}
+
+.small_product{
+  width: var(--small_product_width);
+  height: var(--small_product_height);
+}
+
+/* 구매하기 구현 */
+
+.product_list li{
+  position: relative;
+}
+
+.buy_button{
+  border: 0 solid black;
+  color: white;
+  background: var(--button_color);
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: var(--button_size_width);
+  height: var(--button_size_height);  
+}
+
+.go_buy{
+  text-decoration: none;
+}
+
+.go_buy:hover > .buy_button{
+  background: blue;
+  width: var(--button_hover_width);
+  height: var(--button_hover_height);
+}
+
+.go_buy:hover > .buy_button::before{
+  content: "구매하기 ";
+  color: white;
+  font-family: var(--small_font_family);
+}
+
+.big_box:hover,
+.small_box:hover{
+  border-color:blue;
+}
